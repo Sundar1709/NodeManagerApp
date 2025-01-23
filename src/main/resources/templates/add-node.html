@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Node to Group</title>
+</head>
+<body>
+<h1>Add Node to Group</h1>
+<form action="/add-node" method="post">
+    <label for="groupName">Group Name:</label>
+    <input type="text" id="groupName" name="groupName" required><br>
+    <label for="nodeName">Node Name:</label>
+    <input type="text" id="nodeName" name="nodeName" required><br>
+    <button type="submit">Add Node</button>
+</form>
+<a href="/">Back</a>
+</body>
+</html>
