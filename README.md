@@ -16,4 +16,9 @@ Before running the application, ensure you have the following installed:
 
 **Setup**
 1. Clone the Repository
-git clone 
+"git clone https://github.com/Sundar1709/mySpringApp.git"
+2. cd mySpringApp
+3. Build the Project-->
+   mvn clean install
+4. run the application -->mvn spring-boot:run
+5. The Application will start on localhost:8080
