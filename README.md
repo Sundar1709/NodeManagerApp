@@ -1,8 +1,8 @@
-# **mySpringApp**
+# **NodeManagerApp**
 
 ## **Introduction**
 
-**mySpringApp** is a Spring Boot application designed to manage virtual nodes and their connections in a hierarchical structure. It enables users to:
+**NodeManagerApp** is a Spring Boot application designed to manage virtual nodes and their connections in a hierarchical structure. It enables users to:
 - Create connection groups.
 - Associate nodes with these groups.
 
