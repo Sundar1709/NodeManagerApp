@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 method: form.method,
                 body: formData
             })
-            .then(response => response.text())
+            .then(response => response.json())
             .then(data => {
-                if (data.includes('error')) {
-                    document.querySelector('.error').innerText = data;
+                if (data.error) {
+                    document.querySelector('.error').innerText = data.error;
                 } else {
-                    document.querySelector('.success').innerText = data;
+                    document.querySelector('.success').innerText = data.message;
                     setTimeout(() => {
                         window.location.href = '/';
                     }, 2000);

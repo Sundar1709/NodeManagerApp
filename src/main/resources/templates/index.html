@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Virtual Nodes</title>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/styles.css}">
+    <script th:src="@{/static/scripts.js}" defer></script>
 </head>
 <body>
-<h1>Virtual Nodes Management</h1>
-<a href="/create-group">Create Connection Group</a><br>
-<a href="/add-node">Add Node to Group</a><br>
-<a href="/find-group">Find Group by Node Name</a>
+<header>
+    <div class="container">
+        <div id="branding">
+            <h1>Connection Group Application</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/create-group">Create Connection Group </a><li>
+                <li><a href="/add-node">Add Node to Group</a></li>
+                <li><a href="/find-group">Find Group by Node Name</a><li>
+            </ul>
+        </nav>
+    </div>
+    </header>
 </body>
 </html>
