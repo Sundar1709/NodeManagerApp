@@ -30,7 +30,7 @@ Follow these steps to set up and run the application:
    ```bash
    https://github.com/Sundar1709/NodeManagerApp.git
 
-   cd mySpringApp
+   cd NodeManagerApp
 2. **Build the Project -Use Maven to clean and build the project:**
    ```bash
    mvn clean install
