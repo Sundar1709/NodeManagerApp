@@ -28,7 +28,7 @@ Follow these steps to set up and run the application:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Sundar1709/mySpringApp.git
+   https://github.com/Sundar1709/NodeManagerApp.git
 
    cd mySpringApp
 2. **Build the Project -Use Maven to clean and build the project:**
