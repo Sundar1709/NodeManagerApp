@@ -1,24 +1,54 @@
-# mySpringApp
-**Introduction**
+# **mySpringApp**
 
+## **Introduction**
 
-This Spring Boot application allows you to manage virtual nodes and their connections in a hierarchical fashion. Users can create connection groups and associate nodes with them. The application includes both a backend API and a simple UI for creating and managing connection groups.
+**mySpringApp** is a Spring Boot application designed to manage virtual nodes and their connections in a hierarchical structure. It enables users to:
+- Create connection groups.
+- Associate nodes with these groups.
 
-**Prerequisites**
+The application includes:
+- A backend API for managing nodes and connections.
+- A simple user interface for creating and managing connection groups.
 
-Before running the application, ensure you have the following installed:
+---
 
-* Java Development Kit (JDK) 11 or later
+## **Prerequisites**
 
-* Apache Maven 3.6 or later
+Before you run the application, ensure that you have the following installed on your system:
 
-* An IDE (e.g., IntelliJ IDEA, Eclipse) or text editor
+- **Java Development Kit (JDK)**: Version 11 or later
+- **Apache Maven**: Version 3.6 or later
+- An **IDE** (e.g., IntelliJ IDEA, Eclipse) or a text editor of your choice
 
-**Setup**
-1. Clone the Repository
-"git clone https://github.com/Sundar1709/mySpringApp.git"
-2. cd mySpringApp
-3. Build the Project-->
+---
+
+## **Setup**
+
+Follow these steps to set up and run the application:
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Sundar1709/mySpringApp.git
+
+   cd mySpringApp
+2. **Build the Project -Use Maven to clean and build the project:**
+   ```bash
    mvn clean install
-4. run the application -->mvn spring-boot:run
-5. The Application will start on localhost:8080
+
+3. **Run the Application**
+   ```bash
+   mvn spring-boot:run
+
+4. **Access the Application**
+   ```bash
+   http://localhost:8080
+
+## **Features**
+
+- Hierarchical management of virtual nodes and connections.
+- Creation of connection groups for better organization.
+- User-friendly interface for managing groups and nodes.
+
+---
+
+

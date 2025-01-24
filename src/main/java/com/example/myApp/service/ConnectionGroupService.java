@@ -7,7 +7,9 @@ import com.example.myApp.repository.VirtualNodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-    @Service
+import java.util.Optional;
+
+@Service
     public class ConnectionGroupService {
         @Autowired
         private ConnectionGroupRepository connectionGroupRepository;
@@ -20,26 +22,17 @@ import org.springframework.stereotype.Service;
         }
 
         public ConnectionGroup addNodeToGroup(String groupName, String nodeName) {
-            ConnectionGroup group = connectionGroupRepository.findByGroupName(groupName);
+            Optional<ConnectionGroup> group = connectionGroupRepository.findByGroupName(groupName);
+            if(group.isEmpty()) throw new RuntimeException("Connection group not found");
             VirtualNode node = virtualNodeRepository.findByNodeName(nodeName);
-
-            if (group == null) {
-                throw new RuntimeException("Connection group not found");
-            }
-
-            if (node != null && node.getConnectionGroup() != null) {
-                throw new RuntimeException("Node already belongs to another group");
-            }
-
-            if (node == null) {
-                node = new VirtualNode();
+            if(node!=null && node.getConnectionGroup()!=null) throw new RuntimeException("Node already belongs to another group");
+            if(node==null){
+                node=new VirtualNode();
                 node.setNodeName(nodeName);
             }
-
-            node.setConnectionGroup(group);
+            node.setConnectionGroup(group.get());
             virtualNodeRepository.save(node);
-
-            return group;
+            return group.get();
         }
 
         public ConnectionGroup findConnectionGroupByNodeName(String nodeName) {
